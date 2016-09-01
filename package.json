@@ -1,0 +1,122 @@
+{
+    "author": "jrcrutchley@gmail.com",
+    "dependencies": {
+        "pebble-clay": "^1.0.2"
+    },
+    "keywords": [],
+    "name": "pkmn",
+    "pebble": {
+        "capabilities": [
+            "configurable"
+        ],
+        "displayName": "Pkmn",
+        "enableMultiJS": true,
+        "messageKeys": [
+            "pkmn_choice_in"
+        ],
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "file": "images/Espeon.png",
+                    "name": "Espeon",
+                    "targetPlatforms": null,
+                    "type": "png"
+                },
+                {
+                    "file": "images/Blastoise.png",
+                    "name": "Blastoise",
+                    "targetPlatforms": null,
+                    "type": "png"
+                },
+                {
+                    "file": "images/Wartortle.png",
+                    "name": "Wartortle",
+                    "targetPlatforms": null,
+                    "type": "png"
+                },
+                {
+                    "file": "images/Squirtle.png",
+                    "name": "Squirtle",
+                    "targetPlatforms": null,
+                    "type": "png"
+                },
+                {
+                    "file": "images/Charizard.png",
+                    "name": "Charizard",
+                    "targetPlatforms": null,
+                    "type": "png"
+                },
+                {
+                    "file": "images/Charmeleon.png",
+                    "name": "Charmeleon",
+                    "targetPlatforms": null,
+                    "type": "png"
+                },
+                {
+                    "file": "images/Charmander.png",
+                    "name": "Charmander",
+                    "targetPlatforms": null,
+                    "type": "png"
+                },
+                {
+                    "file": "images/Kuriboh.png",
+                    "name": "Kuriboh",
+                    "type": "png"
+                },
+                {
+                    "file": "images/Missingno_RB.png",
+                    "name": "Missingno",
+                    "targetPlatforms": null,
+                    "type": "png"
+                },
+                {
+                    "file": "images/Bulbasaur_Gold_Sliver_Back_Shiny.png",
+                    "name": "Bulbasaur_back",
+                    "type": "png"
+                },
+                {
+                    "file": "images/Venusaur.png",
+                    "name": "Venusaur_back",
+                    "type": "png"
+                },
+                {
+                    "file": "images/Ivysaur.png",
+                    "name": "Ivysaur_back",
+                    "type": "png"
+                },
+                {
+                    "file": "images/Eevee.png",
+                    "name": "Eevee_front",
+                    "type": "png"
+                },
+                {
+                    "file": "images/Jolteon.png",
+                    "name": "Jolteon_front",
+                    "type": "png"
+                },
+                {
+                    "file": "images/Umbreon.png",
+                    "name": "Umbreon_front",
+                    "type": "png"
+                },
+                {
+                    "file": "images/Template battle.png",
+                    "name": "image_pokemon_main",
+                    "targetPlatforms": null,
+                    "type": "png"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite",
+            "diorite"
+        ],
+        "uuid": "7bd18cca-648f-40da-a44e-d41df7bbcd8c",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "0.1.0"
+}
