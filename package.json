@@ -1,5 +1,5 @@
 {
-    "author": "jrcrutchley@gmail.com",
+    "author": "J03bot",
     "dependencies": {
         "pebble-clay": "^1.0.2"
     },
@@ -9,10 +9,11 @@
         "capabilities": [
             "configurable"
         ],
-        "displayName": "Pkmn",
+        "displayName": "Pokemon - battery evolution",
         "enableMultiJS": true,
         "messageKeys": [
-            "pkmn_choice_in"
+            "pkmn_choice_in",
+            "date_type"
         ],
         "projectType": "native",
         "resources": {

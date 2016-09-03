@@ -14,13 +14,9 @@ module.exports = [
       {
         "type": "select",
       "messageKey": "pkmn_choice_in",
-      "defaultValue": "--",
+      "defaultValue": "0",
       "label": "Choose your starter!",
       "options": [
-        { 
-          "label": "", 
-          "value": "" 
-        },
         { 
           "label": "Bulbasaur",
           "value": 0 
@@ -34,7 +30,23 @@ module.exports = [
           "value": 2 
         }
       ]
-      }
+      },
+    {
+      "type": "select",
+      "messageKey": "date_type",
+      "defaultValue":"--",
+      "label":"Choose date format",
+      "options":[
+        {
+          "label":"DD/MM",
+          "value":0
+        },
+        {
+          "label":"MM/DD",
+          "value":1
+        }
+        ]
+      },
     ]
   },
   {

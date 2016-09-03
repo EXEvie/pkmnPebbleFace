@@ -24,6 +24,8 @@ static TextLayer *s_back_layer;
 static Window *s_main_window;
 
 uint32_t pkmn_key = 2;
+uint32_t date_key = 0;
+int date_choice;
 
 static char s_battery_buffer[32];
 int batt_percent = 100;
@@ -172,24 +174,6 @@ static void Eevee(){//Eevee function checks for states defined by time, charge s
 }
 
 
-/*
-Configuration and communication
-*/
-
-static void prv_inbox_received_handler(DictionaryIterator *iter, void *context) {
-  // Read pkmn preferences
-  Tuple *pkmn_choice_tup = dict_find(iter, MESSAGE_KEY_pkmn_choice_in);
-  if(pkmn_choice_tup){
-    pkmn_choice = pkmn_choice_tup->value->int8-48;
-  }
-  APP_LOG(APP_LOG_LEVEL_INFO,"pkmn_choice = %d",pkmn_choice);
-  persist_write_int(pkmn_key, pkmn_choice);
-  if(jolt_check==0){
-    starter_evolution();
-  }
-  
-}
-
 
 /*
 Updating time/date/battery
@@ -210,7 +194,22 @@ static void update_time(){
                                           "%H:%M" : "%I:%M", tick_time);
   strftime(hour,sizeof(hour),"%H",tick_time);
   text_layer_set_text(s_time_layer, buffer);
-  strftime(date_buffer, sizeof("00 / 00"), "%d / %m",tick_time);//date in dd/mm format
+  
+  if(persist_exists(date_key)) {
+    // Read persisted value
+    date_choice = persist_read_int(date_key);
+  } 
+  else {
+    // Choose a default value
+    date_choice = 0;
+  }
+  
+  if(date_choice==0){
+    strftime(date_buffer, sizeof("00 / 00"), "%d / %m",tick_time);//date in dd/mm format
+  }
+  else{
+    strftime(date_buffer, sizeof("00 / 00"), "%m / %d",tick_time);//date in dd/mm format
+  }
   text_layer_set_text(s_date_layer, date_buffer);
   if (strncmp(date_buffer,"01 / 04",7)==0){
     Kuriboh = 1;
@@ -244,6 +243,39 @@ static void update_time(){
 static void tick_handler(struct tm *tick_time, TimeUnits units_changed){
   update_time();
 }
+
+
+/*
+Configuration and communication
+*/
+
+static void prv_inbox_received_handler(DictionaryIterator *iter, void *context) {
+  // Read pkmn preferences
+  Tuple *pkmn_choice_tup = dict_find(iter, MESSAGE_KEY_pkmn_choice_in);
+  if(pkmn_choice_tup){
+    pkmn_choice = pkmn_choice_tup->value->int8-48;
+  }
+  if(pkmn_choice!=0&&pkmn_choice!=1&&pkmn_choice!=2){
+    pkmn_choice = pkmn_key;
+  }
+  APP_LOG(APP_LOG_LEVEL_INFO,"pkmn_choice = %d",pkmn_choice);
+  persist_write_int(pkmn_key, pkmn_choice);
+  if(jolt_check==0){
+    starter_evolution();
+  }
+  
+  Tuple *date_choice_tup = dict_find(iter, MESSAGE_KEY_date_type);
+  if(date_choice_tup){
+    date_choice = date_choice_tup->value->int8-48;
+    persist_write_int(date_key, date_choice);
+    update_time();
+  }
+  
+  
+}
+
+
+
 
 
 
