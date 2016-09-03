@@ -149,8 +149,6 @@ static void Eevee(){//Eevee function checks for states defined by time, charge s
       }
     }
   }
-  char Eevee_string[60];
-  snprintf(Eevee_string,60,"%s L30",Eevee_text); //replace this with phone battery, and move hp bar down
   //Eevee text
   s_front_layer = text_layer_create(GRect(10,3,120,60));
   layer_add_child(window_layer, text_layer_get_layer(s_front_layer));
@@ -158,7 +156,7 @@ static void Eevee(){//Eevee function checks for states defined by time, charge s
   text_layer_set_text_color(s_front_layer, GColorBlack);
   text_layer_set_font(s_front_layer,fonts_get_system_font(FONT_KEY_GOTHIC_14));
   text_layer_set_text_alignment(s_front_layer, GTextAlignmentLeft);
-  text_layer_set_text(s_front_layer,Eevee_string);
+  text_layer_set_text(s_front_layer,Eevee_text);
   
   
   
@@ -186,7 +184,9 @@ static void prv_inbox_received_handler(DictionaryIterator *iter, void *context) 
   }
   APP_LOG(APP_LOG_LEVEL_INFO,"pkmn_choice = %d",pkmn_choice);
   persist_write_int(pkmn_key, pkmn_choice);
-  starter_evolution();
+  if(jolt_check==0){
+    starter_evolution();
+  }
   
 }
 
@@ -232,8 +232,10 @@ static void update_time(){
       espeon_check = 0;
     }
   }
-  Eevee();
-  starter_evolution();//called every time time updates (once per minute), so won't update Jolteon until next minute change 
+  if(jolt_check==0){
+    Eevee();
+    starter_evolution();//called every time time updates (once per minute), so won't update Jolteon until next minute change 
+  }
 }
 
 

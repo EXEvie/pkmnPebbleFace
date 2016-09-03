@@ -18,92 +18,269 @@
         "resources": {
             "media": [
                 {
+                    "file": "images/Wartortle_colour.png",
+                    "name": "Wartortle",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Venusaur_colour.png",
+                    "name": "Venusaur_back",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Umbreon_colour.png",
+                    "name": "Umbreon_front",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Template battle_colour.png",
+                    "name": "image_pokemon_main",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Squirtle_colour.png",
+                    "name": "Squirtle",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Kuriboh_colour.png",
+                    "name": "Kuriboh",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Jolteon_colour.png",
+                    "name": "Jolteon_front",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Ivysaur_colour.png",
+                    "name": "Ivysaur_back",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Eevee_colour.png",
+                    "name": "Eevee_front",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Charmeleon_colour.png",
+                    "name": "Charmeleon",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Charmander_colour.png",
+                    "name": "Charmander",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Charizard_colour.png",
+                    "name": "Charizard",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Bulbasaur_colour.png",
+                    "name": "Bulbasaur_back",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Blastoise_colour.png",
+                    "name": "Blastoise",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Espeon_colour.png",
+                    "name": "Espeon",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/Espeon.png",
                     "name": "Espeon",
-                    "targetPlatforms": null,
+                    "targetPlatforms": [
+                        "aplite",
+                        "diorite"
+                    ],
                     "type": "png"
                 },
                 {
                     "file": "images/Blastoise.png",
                     "name": "Blastoise",
-                    "targetPlatforms": null,
+                    "targetPlatforms": [
+                        "aplite",
+                        "diorite"
+                    ],
                     "type": "png"
                 },
                 {
                     "file": "images/Wartortle.png",
                     "name": "Wartortle",
-                    "targetPlatforms": null,
+                    "targetPlatforms": [
+                        "aplite",
+                        "diorite"
+                    ],
                     "type": "png"
                 },
                 {
                     "file": "images/Squirtle.png",
                     "name": "Squirtle",
-                    "targetPlatforms": null,
+                    "targetPlatforms": [
+                        "aplite",
+                        "diorite"
+                    ],
                     "type": "png"
                 },
                 {
                     "file": "images/Charizard.png",
                     "name": "Charizard",
-                    "targetPlatforms": null,
+                    "targetPlatforms": [
+                        "aplite",
+                        "diorite"
+                    ],
                     "type": "png"
                 },
                 {
                     "file": "images/Charmeleon.png",
                     "name": "Charmeleon",
-                    "targetPlatforms": null,
+                    "targetPlatforms": [
+                        "aplite",
+                        "diorite"
+                    ],
                     "type": "png"
                 },
                 {
                     "file": "images/Charmander.png",
                     "name": "Charmander",
-                    "targetPlatforms": null,
+                    "targetPlatforms": [
+                        "aplite",
+                        "diorite"
+                    ],
                     "type": "png"
                 },
                 {
                     "file": "images/Kuriboh.png",
                     "name": "Kuriboh",
+                    "targetPlatforms": [
+                        "aplite",
+                        "diorite"
+                    ],
                     "type": "png"
                 },
                 {
                     "file": "images/Missingno_RB.png",
                     "name": "Missingno",
-                    "targetPlatforms": null,
+                    "targetPlatforms": [
+                        "aplite",
+                        "basalt",
+                        "chalk",
+                        "diorite"
+                    ],
                     "type": "png"
                 },
                 {
                     "file": "images/Bulbasaur_Gold_Sliver_Back_Shiny.png",
                     "name": "Bulbasaur_back",
+                    "targetPlatforms": [
+                        "aplite",
+                        "diorite"
+                    ],
                     "type": "png"
                 },
                 {
                     "file": "images/Venusaur.png",
                     "name": "Venusaur_back",
+                    "targetPlatforms": [
+                        "aplite",
+                        "diorite"
+                    ],
                     "type": "png"
                 },
                 {
                     "file": "images/Ivysaur.png",
                     "name": "Ivysaur_back",
+                    "targetPlatforms": [
+                        "aplite",
+                        "diorite"
+                    ],
                     "type": "png"
                 },
                 {
                     "file": "images/Eevee.png",
                     "name": "Eevee_front",
+                    "targetPlatforms": [
+                        "aplite",
+                        "diorite"
+                    ],
                     "type": "png"
                 },
                 {
                     "file": "images/Jolteon.png",
                     "name": "Jolteon_front",
+                    "targetPlatforms": [
+                        "aplite",
+                        "diorite"
+                    ],
                     "type": "png"
                 },
                 {
                     "file": "images/Umbreon.png",
                     "name": "Umbreon_front",
+                    "targetPlatforms": [
+                        "aplite",
+                        "diorite"
+                    ],
                     "type": "png"
                 },
                 {
                     "file": "images/Template battle.png",
                     "name": "image_pokemon_main",
-                    "targetPlatforms": null,
+                    "targetPlatforms": [
+                        "aplite",
+                        "diorite"
+                    ],
                     "type": "png"
                 }
             ]
@@ -111,6 +288,7 @@
         "sdkVersion": "3",
         "targetPlatforms": [
             "aplite",
+            "basalt",
             "diorite"
         ],
         "uuid": "7bd18cca-648f-40da-a44e-d41df7bbcd8c",
