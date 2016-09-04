@@ -103,11 +103,9 @@ static void starter_evolution(){
   text_layer_set_text(s_pebble_batt, s_battery_buffer);
   APP_LOG(APP_LOG_LEVEL_INFO, "battery layer set.");
 
-  s_backward_layer = bitmap_layer_create(GRect(7,62,58,60));
-  layer_add_child(window_layer,bitmap_layer_get_layer(s_backward_layer));
   s_backward_bitmap = gbitmap_create_with_resource(starter_pkmn_image[pkmn_choice][pkmn_count]);
-  bitmap_layer_set_alignment(s_backward_layer, GAlignBottom);
   bitmap_layer_set_bitmap(s_backward_layer, s_backward_bitmap);
+  
   
   starter_layer_flag = 1;
 }
@@ -151,20 +149,10 @@ static void Eevee(){//Eevee function checks for states defined by time, charge s
       }
     }
   }
-  //Eevee text
-  s_front_layer = text_layer_create(GRect(10,3,120,60));
-  layer_add_child(window_layer, text_layer_get_layer(s_front_layer));
-  text_layer_set_background_color(s_front_layer,GColorClear);
-  text_layer_set_text_color(s_front_layer, GColorBlack);
-  text_layer_set_font(s_front_layer,fonts_get_system_font(FONT_KEY_GOTHIC_14));
-  text_layer_set_text_alignment(s_front_layer, GTextAlignmentLeft);
+  //Eevee text 
   text_layer_set_text(s_front_layer,Eevee_text);
   
-  
-  
-  //Eevee image layer
-  s_forward_layer = bitmap_layer_create(GRect(84,9,58,60));
-  layer_add_child(window_layer,bitmap_layer_get_layer(s_forward_layer));
+  //Eevee image layer  
   APP_LOG(APP_LOG_LEVEL_INFO, "Eevee layer loaded");
   s_forward_bitmap = gbitmap_create_with_resource(Eeveelution);
   bitmap_layer_set_bitmap(s_forward_layer, s_forward_bitmap);
