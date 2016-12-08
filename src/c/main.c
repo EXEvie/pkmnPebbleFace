@@ -243,10 +243,11 @@ static void prv_inbox_received_handler(DictionaryIterator *iter, void *context) 
   if(pkmn_choice_tup){
     pkmn_choice = pkmn_choice_tup->value->int8-48;
   }
+  APP_LOG(APP_LOG_LEVEL_INFO,"pkmn_choice = %d",pkmn_choice);
   if(pkmn_choice!=0&&pkmn_choice!=1&&pkmn_choice!=2){
     pkmn_choice = pkmn_key;
   }
-  APP_LOG(APP_LOG_LEVEL_INFO,"pkmn_choice = %d",pkmn_choice);
+  
   persist_write_int(pkmn_key, pkmn_choice);
   if(jolt_check==0){
     starter_evolution();
